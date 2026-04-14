@@ -2,84 +2,166 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Mi Panel - SportClub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Daninson - SportClub 2026</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Ajustes extra forzados para garantizar el Morado y Amarillo */
+        .text-gold { color: var(--sport-gold) !important; }
+        .text-purple { color: var(--sport-purple) !important; }
+        .bg-purple-dark { background-color: var(--sport-purple) !important; color: white; }
+        .bg-gold-light { background-color: #fcf1d1 !important; border: 2px solid var(--sport-gold); }
+        .border-gold { border-color: var(--sport-gold) !important; }
+        .border-purple { border-color: var(--sport-purple) !important; }
+    </style>
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-corporate">
-        <div class="container">
-            <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="#">
-                <img src="logoSportClub.png" alt="Logo" height="30">
-                <span>| Usuario</span>
-            </a>
-            <div class="ms-auto">
-                <button class="btn btn-sm btn-outline-light rounded-pill me-2">Editar Perfil</button>
-                <a href="index.html" class="btn btn-sm btn-light rounded-pill">Salir</a>
+<body style="background-color: #f9f7fc;"> <header>
+        <nav class="navbar navbar-sport py-3" style="border-bottom: 5px solid var(--sport-gold);">
+            <div class="container">
+                <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="#">
+                    <img src="logoSportClub.png" height="35" alt="Logo">
+                    <span class="text-gold">| MI PANEL</span>
+                </a>
+                <div class="ms-auto d-flex align-items-center gap-3">
+                    <span class="text-white small fw-bold d-none d-md-inline">Socio: Daninson</span>
+                    <a href="index.html" class="btn btn-gold btn-sm rounded-pill px-3 shadow-sm">Cerrar Sesión</a>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
     <main class="container py-4">
-        <div class="row g-4">
-            <div class="col-lg-4">
-                <div class="card p-4 h-100 border-start border-primary border-5">
-                    <h5 class="fw-bold mb-4">Mi Perfil</h5>
-                    <div class="text-center">
-                        <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px; font-size: 2rem;">👤</div>
-                        <p class="mb-1 fw-bold fs-5">Rodrigo Programador</p>
-                        <p class="text-muted small">rodrigo@analista.cl</p>
-                    </div>
-                    <div class="mt-3">
-                        <label class="fw-bold small">Objetivos:</label>
-                        <p class="small text-muted">- Aumentar masa muscular<br>- Mejorar resistencia</p>
-                    </div>
+        <div class="card bg-gradient-purple p-4 mb-4 border-0 shadow-lg position-relative overflow-hidden" style="border-left: 8px solid var(--sport-gold) !important;">
+            <div class="row align-items-center">
+                <div class="col-md-8 position-relative" style="z-index: 2;">
+                    <h2 class="fw-bold mb-1 text-gold">¡Yaha, Daninson! ⚡</h2>
+                    <p class="mb-0 text-white">Tu cuerpo escucha todo lo que tu mente dice. ¡Vamos a entrenar!</p>
                 </div>
-            </div>
-
-            <div class="col-lg-4">
-                <div class="card p-4 h-100 text-center">
-                    <h5 class="fw-bold mb-3">Progreso Semanal</h5>
-                    <div class="position-relative d-inline-block">
-                        <img src="usagi.png" alt="Usagi" class="usagi-float" style="width: 120px;">
-                    </div>
-                    <div class="progress mt-4" style="height: 25px; border-radius: 50px;">
-                        <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" style="width: 75%">75% Avance</div>
-                    </div>
-                    <p class="mt-3 small text-muted">¡Casi llegas a la meta de la semana!</p>
-                </div>
-            </div>
-
-            <div class="col-lg-4">
-                <div class="card p-4 h-100">
-                    <h5 class="fw-bold mb-3">Clases Rápidas</h5>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item d-flex justify-content-between align-items-center px-0">Spinning <button class="btn btn-sm btn-corporate">Reservar</button></li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center px-0">CrossFit <button class="btn btn-sm btn-corporate">Reservar</button></li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center px-0">Yoga <button class="btn btn-sm btn-corporate">Reservar</button></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-12">
-                <div class="card p-4 shadow-sm">
-                    <h5 class="fw-bold mb-3">Mis Próximas Clases</h5>
-                    <div class="table-responsive">
-                        <table class="table table-hover align-middle">
-                            <thead class="table-dark">
-                                <tr><th>Día</th><th>Hora</th><th>Entrenamiento</th><th>Acción</th></tr>
-                            </thead>
-                            <tbody>
-                                <tr><td>Lunes</td><td>18:00</td><td>Boxeo</td><td><button class="btn btn-sm btn-outline-danger">Anular</button></td></tr>
-                                <tr><td>Miércoles</td><td>10:00</td><td>HIIT</td><td><button class="btn btn-sm btn-outline-danger">Anular</button></td></tr>
-                            </tbody>
-                        </table>
-                    </div>
+                <div class="col-md-4 text-md-end text-center mt-3 mt-md-0 position-relative" style="z-index: 2;">
+                    <img src="usagi.png" class="usagi-mascot" style="width: 120px; filter: drop-shadow(0 5px 15px rgba(242,183,5,0.6));" alt="Usagi Entrenando">
                 </div>
             </div>
         </div>
+
+        <section class="row g-4 mb-4">
+            <div class="col-md-4 col-sm-6">
+                <div class="card p-3 bg-gradient-gold h-100 shadow border-0">
+                    <p class="mb-1 fw-bold text-purple opacity-75">🔥 Racha Actual</p>
+                    <h2 class="display-6 fw-bold mb-0 text-purple">5 Días</h2>
+                    <small class="text-purple fw-bold">¡Tu mejor récord del mes!</small>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="card p-3 bg-gradient-purple h-100 shadow border-0">
+                    <p class="mb-1 fw-bold text-gold opacity-75">📅 Clases Asistidas</p>
+                    <h2 class="display-6 fw-bold mb-0 text-white">12</h2>
+                    <small class="text-gold">En abril 2026</small>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <div class="card p-3 bg-gold-light h-100 shadow border-0">
+                    <p class="mb-1 fw-bold text-purple opacity-75">🎯 Próxima Meta</p>
+                    <h4 class="fw-bold mb-1 text-purple">Correr 5KM</h4>
+                    <div class="progress mt-2" style="height: 12px; background-color: #e0d5f0;">
+                        <div class="progress-bar bg-purple-dark progress-bar-striped progress-bar-animated" style="width: 70%;"></div>
+                    </div>
+                    <small class="mt-1 text-purple fw-bold">70% completado</small>
+                </div>
+            </div>
+        </section>
+
+        <section class="row g-4">
+            <div class="col-lg-4">
+                <div class="card p-4 h-100 shadow-lg border-top border-5 border-gold">
+                    <div class="text-center mb-4">
+                        <div class="avatar-circle bg-gradient-purple mx-auto mb-3 border border-3 border-gold" style="width: 90px; height: 90px; font-size: 3rem; color: var(--sport-gold); box-shadow: 0 4px 10px rgba(46, 26, 71, 0.4);">
+                            D
+                        </div>
+                        <h4 class="fw-bold mb-0 text-purple">Daninson</h4>
+                        <p class="text-muted small mb-2">daninson@mail.com</p>
+                        <span class="badge rounded-pill px-3 py-2 bg-gradient-gold text-purple shadow-sm fw-bold">Nivel: Atleta Pro ⭐</span>
+                    </div>
+
+                    <div class="mt-3">
+                        <h6 class="fw-bold border-bottom border-purple pb-2 text-purple">Tu Entrenador Asignado</h6>
+                        <div class="d-flex align-items-center gap-3 mt-3 p-2 rounded-3 bg-purple-dark shadow-sm">
+                            <div class="avatar-circle bg-gradient-gold text-purple" style="width: 40px; height: 40px; font-size: 1.2rem;">U</div>
+                            <div>
+                                <p class="mb-0 fw-bold small text-gold">Coach Usagi</p>
+                                <p class="mb-0 small text-white">Especialista en Funcional</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-gold w-100 mt-4 shadow fw-bold">Editar Mi Perfil</button>
+                </div>
+            </div>
+
+            <div class="col-lg-8">
+                <div class="card p-4 mb-4 shadow-lg border-0">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h5 class="fw-bold mb-0 text-purple">Mi Agenda Deportiva</h5>
+                        <button class="btn btn-sm btn-gold rounded-pill fw-bold">Ver Calendario</button>
+                    </div>
+                    
+                    <div class="list-group list-group-flush">
+                        <div class="list-group-item border-0 bg-purple-dark rounded-4 mb-3 p-3 shadow text-white border-start border-5 border-gold">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="bg-gradient-gold p-2 rounded-3 text-center shadow-sm text-purple" style="min-width: 65px;">
+                                        <span class="d-block fw-bold">HOY</span>
+                                        <span class="h5 fw-bold mb-0">18:00</span>
+                                    </div>
+                                    <div>
+                                        <h5 class="fw-bold mb-0 text-gold">CrossFit Extremo</h5>
+                                        <small>Sala 1 • Coach Usagi</small>
+                                    </div>
+                                </div>
+                                <span class="badge bg-gradient-gold text-purple rounded-pill px-3 py-2 fw-bold">Confirmado ✅</span>
+                            </div>
+                        </div>
+
+                        <div class="list-group-item border-0 bg-gold-light rounded-4 p-3 shadow-sm border-start border-5 border-purple">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="bg-gradient-purple p-2 rounded-3 text-center shadow-sm text-white" style="min-width: 65px;">
+                                        <span class="d-block fw-bold text-gold">MIE</span>
+                                        <span class="h5 fw-bold mb-0">10:00</span>
+                                    </div>
+                                    <div>
+                                        <h5 class="fw-bold mb-0 text-purple">Recuperación y Yoga</h5>
+                                        <small class="text-purple fw-bold">Sala Zen</small>
+                                    </div>
+                                </div>
+                                <button class="btn btn-sm bg-gradient-purple text-white rounded-pill fw-bold">Cancelar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="card p-3 bg-gradient-purple text-center h-100 shadow border-0 border-bottom border-5 border-gold" style="cursor: pointer;">
+                            <h3 class="mb-2">📅</h3>
+                            <h6 class="fw-bold mb-0 text-gold">Reservar Nueva Clase</h6>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card p-3 bg-gradient-gold text-center h-100 shadow border-0 border-bottom border-5 border-purple" style="cursor: pointer;">
+                            <h3 class="mb-2">📊</h3>
+                            <h6 class="fw-bold mb-0 text-purple">Ver Mis Estadísticas</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer><p class="mb-0">&copy; 2026 SportClub. Portal Usuario.</p></footer>
+    <footer>
+        <p class="mb-0 fw-bold">&copy; 2026 SportClub. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
