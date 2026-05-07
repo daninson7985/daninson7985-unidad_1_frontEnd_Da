@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel Coach - SportClub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-corporate">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="#">
+                <img src="logoSportClub.png" alt="Logo" height="30">
+                <span style="color: var(--sport-gold);">| Coach</span>
+            </a>
+            <div class="ms-auto"><a href="index.html" class="btn btn-sm btn-light rounded-pill">Cerrar Sesión</a></div>
+        </div>
+    </nav>
+
+    <main class="container py-4">
+        <div class="d-flex align-items-center gap-3 mb-4">
+            <img src="usagi.png" alt="Usagi" class="usagi-float" style="width: 60px;">
+            <h3 class="fw-bold">Panel de Entrenador</h3>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <div class="card p-4 border-start border-success border-5">
+                    <h5 class="fw-bold mb-3">Mis Alumnos</h5>
+                    <div class="list-group list-group-flush">
+                        <div class="list-group-item d-flex justify-content-between px-0">Pedro S. <button class="btn btn-sm btn-success">Progreso</button></div>
+                        <div class="list-group-item d-flex justify-content-between px-0">María L. <button class="btn btn-sm btn-success">Progreso</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="card p-4">
+                    <h5 class="fw-bold mb-3">Horario Semanal</h5>
+                    <table class="table small">
+                        <thead><tr><th>Lunes</th><th>Martes</th><th>Miércoles</th></tr></thead>
+                        <tbody><tr><td>Spinning (18:00)</td><td>Descanso</td><td>HIIT (10:00)</td></tr></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

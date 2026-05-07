@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Socio - SportClub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Mantenemos tu paleta de colores corporativa */
+        body {
+            background-color: var(--sport-gold);
+            background-image: linear-gradient(180deg, #F2B705 0%, #f7d060 100%);
+        }
+        .card {
+            border: 3px solid var(--sport-purple);
+            border-radius: 1.5rem;
+        }
+        .text-corporate {
+            color: var(--sport-purple);
+        }
+        .btn-corporate {
+            background-color: var(--sport-purple);
+            color: white;
+            border-radius: 50px;
+            transition: all 0.3s;
+        }
+        .btn-corporate:hover {
+            background-color: #3d225e;
+            color: var(--sport-gold);
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body class="d-flex align-items-center justify-content-center" style="min-height: 100vh;">
+    <main class="container py-5">
+        <section class="row justify-content-center">
+            <div class="col-md-6 col-lg-5">
+                <div class="text-center mb-3">
+                    <img src="usagi.png" alt="Usagi Feliz" class="usagi-float" style="width: 100px;">
+                </div>
+                
+                <div class="card p-5 shadow-lg">
+                    <div class="text-center mb-4">
+                        <img src="logoSportClub.png" alt="Logo SportClub" height="60" class="mb-3">
+                        <h2 class="text-corporate fw-bold">Registro de Socio</h2>
+                        <p class="text-muted">¡Yaha! Únete a la mejor comunidad deportiva</p>
+                    </div>
+                    
+                    <form id="registerForm" novalidate>
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Nombre Completo</label>
+                            <input type="text" id="regName" class="form-control rounded-pill border-2" placeholder="Tu nombre" required>
+                            <div id="nameError" class="text-danger small d-none mt-1">El nombre es obligatorio.</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Correo Electrónico</label>
+                            <input type="email" id="regEmail" class="form-control rounded-pill border-2" placeholder="usuario@correo.com" required>
+                            <div id="emailError" class="text-danger small d-none mt-1">Ingresa un correo válido.</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Contraseña</label>
+                            <input type="password" id="regPass" class="form-control rounded-pill border-2" placeholder="Mínimo 8 caracteres" required>
+                            <div id="passError" class="text-danger small d-none mt-1">Debe tener al menos 8 caracteres, letras y números.</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Repetir Contraseña</label>
+                            <input type="password" id="regPassConfirm" class="form-control rounded-pill border-2" placeholder="Confirma tu clave" required>
+                            <div id="confirmError" class="text-danger small d-none mt-1">Las contraseñas no coinciden.</div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label fw-bold">Deporte de Interés</label>
+                            <input type="text" id="regSport" class="form-control rounded-pill border-2" placeholder="Ej: CrossFit, Boxeo">
+                        </div>
+
+                        <button type="submit" class="btn btn-corporate w-100 mb-3 shadow py-2 fw-bold">Registrarme Ahora</button>
+                    </form>
+                    
+                    <div class="text-center">
+                        <span class="text-muted small">¿Ya eres parte? <a href="login.html" class="text-corporate fw-bold text-decoration-none">Inicia Sesión</a></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center pb-3">
+        <p class="mb-0 small">&copy; 2026 SportClub. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="registro.js"></script>
+</body>
+</html>
