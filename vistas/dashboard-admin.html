@@ -2,51 +2,62 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Admin - SportClub</title>
+    <title>Admin Central | SportClub</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-corporate">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center gap-2" href="#">
-                <img src="logoSportClub.png" alt="Logo" height="30">
-                <span>| Administración Central</span>
-            </a>
-        </div>
+<body class="dashboard-layout">
+    <nav class="sidebar">
+        <img src="../assets/LogosPortClub.png" class="img-fluid mb-5 p-2">
+        <a href="#" class="nav-link active"><i class="bi bi-shield-lock-fill me-2"></i> Gestión de Usuarios</a>
+        <a href="#" class="nav-link text-white-50"><i class="bi bi-geo-alt-fill me-2"></i> Sedes y Campus</a>
+        <button onclick="logout()" class="btn btn-outline-danger w-100 mt-auto rounded-pill">SALIR</button>
     </nav>
 
-    <main class="container py-4">
-        <section class="row g-4">
-            <div class="col-md-4">
-                <div class="card p-4 text-center">
-                    <h2 class="fw-bold text-primary">154</h2>
-                    <p class="text-muted mb-0">Usuarios Totales</p>
-                </div>
+    <main class="main-content">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+                <h1 class="fw-bold text-gradient">CONTROL GLOBAL</h1>
+                <p class="text-white-50">Campus: Santiago | Administrador: Coordinator</p>
             </div>
-            <div class="col-md-4">
-                <div class="card p-4 text-center">
-                    <h2 class="fw-bold text-success">12</h2>
-                    <p class="text-muted mb-0">Clases del Día</p>
-                </div>
+        </div>
+
+        <div class="glass-card p-0 overflow-hidden shadow-lg">
+            <div class="p-3 bg-dark d-flex justify-content-between align-items-center">
+                <h5 class="m-0 text-gold fw-bold">LISTADO DE PERSONAL Y ATLETAS</h5>
+                <span class="badge bg-primary">Total: 6 Registros</span>
             </div>
-            <div class="col-md-4 text-center">
-                <img src="usagi.png" alt="Usagi" class="usagi-float" style="width: 80px;">
-                <p class="fw-bold mt-2">Sistema Operativo</p>
-            </div>
-        </section>
-        
-        <div class="card p-4 mt-4 shadow-sm">
-            <h5 class="fw-bold mb-3">Gestión de Usuarios</h5>
-            <table class="table">
-                <thead class="table-light"><tr><th>Nombre</th><th>Email</th><th>Rol</th><th>Acción</th></tr></thead>
-                <tbody>
-                    <tr><td>Admin Master</td><td>admin@sportclub.com</td><td><span class="badge" style="background-color: var(--sport-purple);">Admin</span></td><td><button class="btn btn-sm btn-secondary">Editar</button></td></tr>
-                </tbody>
+            <table class="table table-dark table-hover m-0 align-middle">
+                <thead class="table-light text-dark">
+                    <tr>
+                        <th>NOMBRE</th>
+                        <th>EMAIL</th>
+                        <th>ROL</th>
+                        <th>INFO PERSONAL</th>
+                        <th class="text-center">ACCIONES</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaAdmin">
+                    </tbody>
             </table>
         </div>
     </main>
 
-    <footer><p class="mb-0">&copy; 2026 SportClub. Sistema de Gestión.</p></footer>
+    <div class="modal fade" id="modalInfo" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-white border-warning">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title text-gold fw-bold">Detalle del Usuario</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="modalBodyContent">
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/admin.js"></script>
 </body>
 </html>
